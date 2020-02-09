@@ -17,6 +17,7 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException();
             }
+
             double[] averageGradeList = new double[numberOfStudents];
 
             // add the list of averagegrade
@@ -31,10 +32,10 @@ namespace GradeBook.GradeBooks
             Array.Reverse(averageGradeList);
 
             // calculate 20, 40, 60, 80
-            int first20 = numberOfStudents * 20 / 100;
-            int first40 = first20 + first20;
-            int first60 = first20 + first40;
-            int first80 = first20 + first60;
+            int first20 = numberOfStudents * 20 / 100 -1;
+            int first40 = numberOfStudents * 40 / 100 -1;
+            int first60 = numberOfStudents * 60 / 100 -1;
+            int first80 = numberOfStudents * 80 / 100 -1;
 
 
             if (averageGrade >= averageGradeList[first20])
