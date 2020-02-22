@@ -116,9 +116,13 @@ namespace GradeBook.GradeBooks
             {
                 case 'A':
                     gpaValue = 4;
+                    if (IsWeighted)
+                        gpaValue++;
                     break;
                 case 'B':
                     gpaValue = 3;
+                    if (IsWeighted)
+                        gpaValue++;
                     break;
                 case 'C':
                     gpaValue = 2;
@@ -130,8 +134,7 @@ namespace GradeBook.GradeBooks
                     gpaValue = 0;
                     break;
             }
-            if (IsWeighted)
-                gpaValue++;
+          
 
             return gpaValue;
         }
